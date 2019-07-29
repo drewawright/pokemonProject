@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { 
+  MatToolbarModule,
+  MatButtonModule 
+} from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import { PokemonIndexComponent } from './components/pokemon/pokemon-index/pokemon-index.component';
@@ -26,7 +31,9 @@ import { EmailFormComponent } from './components/about/email-form/email-form.com
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
