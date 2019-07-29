@@ -4,12 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { 
   MatToolbarModule,
-  MatButtonModule 
+  MatButtonModule,
+  MatGridListModule 
 } from '@angular/material';
+import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { MatGridListModule } from '@angular/material';
 import { PokemonIndexComponent } from './components/pokemon/pokemon-index/pokemon-index.component';
 import { PokemonDetailComponent } from './components/pokemon/pokemon-detail/pokemon-detail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -17,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { EmailFormComponent } from './components/about/email-form/email-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { EmailFormComponent } from './components/about/email-form/email-form.com
     ReactiveFormsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
