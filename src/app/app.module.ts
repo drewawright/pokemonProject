@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { 
+  MatToolbarModule,
+  MatButtonModule 
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { PokemonIndexComponent } from './components/pokemon/pokemon-index/pokemon-index.component';
@@ -20,7 +24,9 @@ import { AboutComponent } from './components/about/about.component';
     AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
