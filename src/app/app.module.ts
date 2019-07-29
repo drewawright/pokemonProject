@@ -19,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { EmailFormComponent } from './components/about/email-form/email-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PokemonService } from './services/pokemon-service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { AppRoutingModule } from './app-routing.module';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
