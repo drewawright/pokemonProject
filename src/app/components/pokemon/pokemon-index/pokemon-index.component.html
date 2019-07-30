@@ -1,10 +1,20 @@
-<div *ngFor="let result of pokemonList.results" class="pokemonCard"> 
-    <h3 class="pokemonName">{{ result.name }}</h3>
-    <h4>Pokemon Number: {{ result.url.slice(39, -1) }}</h4>
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ result.url.slice(39, -1) }}.png" />
-    <button mat-raised-button class="nav-btn" routerLink="/detail/{{ result.url.slice(39, -1) }}">More Info</button>
+<div class="center">
+<mat-grid-list cols="3" rowHeight="2.3:1">
+    <mat-grid-tile *ngFor="let result of pokemonList.results" class="pokemonCard">
+        <div id="number">       
+            <h4>Pokemon Number: {{ result.url.slice(39, -1) }}</h4>
+        </div>
+        <div class="numAndPic">
+            <div id="name">
+                    <h3 class="pokemonName">{{ result.name }}</h3>
+            </div>
+            <div id="sprite">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ result.url.slice(39, -1) }}.png" />
+            </div>
+            <div id="detail">
+                <button mat-raised-button class="nav-btn" routerLink="/detail/{{ result.url.slice(39, -1) }}">More Info</button>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
 </div>
-
-
-
-
