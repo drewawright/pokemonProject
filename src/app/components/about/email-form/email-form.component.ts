@@ -14,6 +14,7 @@ export class EmailFormComponent implements OnInit {
   constructor(private _form: FormBuilder, private http: HttpClient) { }
 
   ngOnInit() {
+    this.createForm();
   }
 
   createForm() {
@@ -21,7 +22,7 @@ export class EmailFormComponent implements OnInit {
       name: new FormControl,
       email: new FormControl,
       message: new FormControl
-    })
+    });
   }
 
   onSubmit() {

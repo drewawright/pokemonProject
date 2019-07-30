@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { 
   MatToolbarModule,
   MatButtonModule,
-  MatGridListModule 
+  MatGridListModule,
+  MatFormFieldModule,
+  MatInputModule, 
 } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
@@ -34,11 +37,14 @@ import { PokemonService } from './services/pokemon-service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatGridListModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     RouterModule,
     AppRoutingModule
   ],
