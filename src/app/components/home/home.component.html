@@ -1,11 +1,20 @@
-<img src="../../../assets/Pokeball.PNG" height="40em" width="40em">
-<h1>Welcome to {{ title }}!</h1>
-<h4>Your one stop shop for Pokemon</h4>
+
+<img class="center" id="PokeLogo" src="../../../assets/PokeMarketFullSize.png">
+<h1 style="text-align:center">Why Catch 'Em All When You Can Buy 'Em All</h1>
 
 <mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>Index</mat-grid-tile>
-    <mat-grid-tile>Picture</mat-grid-tile>
-    <mat-grid-tile>picture</mat-grid-tile>
-    <mat-grid-tile>Details</mat-grid-tile>
+    <mat-grid-tile>
+            <h4>Index</h4>
+            <a routerLink="/index">
+                <img src="../../../assets/Pokeball.PNG" height="80em" width="80em">
+            </a>
+            
+    </mat-grid-tile>
+    <mat-grid-tile>
+        Featured Pokemon
+        <a routerLink="/detail/{{ today | date:'s' }}">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ today | date:'s' }}.png" height="200em" width="200em">
+        </a>
+    </mat-grid-tile>
 </mat-grid-list>
       
