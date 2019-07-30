@@ -1,0 +1,7 @@
+.nav-btn {
+    margin-right: 10px;
+}
+
+#PokeLogo:hover {
+    transform: scale(1.05);
+}
