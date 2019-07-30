@@ -1,8 +1,11 @@
 <mat-toolbar color="primary">
     <span>
-        <img id="PokeLogo" src="../../../assets/PokeMarket.png">
+        <a routerLink="/home">
+            <img id="PokeLogo" src="../../../assets/PokeMarket.png">
+        </a>
     </span>
     <span class="example-fill-remaining-space"></span>
-    <button mat-raised-button class="nav-btn">Register</button>
-    <button mat-raised-button class="nav-btn">Login</button>
+    <button mat-raised-button class="nav-btn" routerLink="/index">Pokemon</button>
+    <button mat-raised-button class="nav-btn" routerLink="/about">About</button>
+    
 </mat-toolbar>
