@@ -16,4 +16,8 @@ export class PokemonService {
   getPokemonList() {
     return this._http.get(`${ApiUrl}/pokemon-form?offset=0&limit=9`);
   }
+
+  getPokemon(id: string) {
+    return this._http.get(`${ApiUrl}/pokemon-form/${id}`);
+  }
 }

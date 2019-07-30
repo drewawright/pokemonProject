@@ -1,0 +1,34 @@
+.detailContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 80vh;
+    text-align: center;
+    background-color: gray;
+    border: 5px ridge black;
+}
+
+.detailImage {
+    width: 250px;
+    height: 200px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.detailImageContainer {
+    width: 250px;
+    height: 200px;
+    flex-basis: 250px;
+    padding: 25px 0; 
+    border: 3px groove white;
+    object-fit: cover;
+}
+
+.pokeName {
+    text-transform: capitalize;
+}
