@@ -12,7 +12,6 @@ import { SearchResult } from 'src/app/models/searchResult';
 export class PokemonIndexComponent implements OnInit {
 
   pokemonList: SearchResult;
-  pokemon: Pokemon;
 
   constructor(private _pokemonService: PokemonService) { }
 
@@ -21,3 +20,4 @@ export class PokemonIndexComponent implements OnInit {
   }
 
 }
+
