@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PokemonService } from '../../../services/pokemon-service';
+import { PokemonDetail } from '../../../models/pokemonDetail';
+import { single } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonDetailComponent implements OnInit {
 
-  constructor() { }
+  pokemonDetail: PokemonDetail;
+
+  constructor(private _activatedRoute: ActivatedRoute, private _pokemonService: PokemonService) { }
 
   ngOnInit() {
+    this._activatedRoute.paramMap.subscribe(routeData => {
+      this._pokemonService.getPokemon(routeData.get('id'))
+      .subscribe((singlePokemon: PokemonDetail) => { 
+        this.pokemonDetail = singlePokemon
+      });
+    })
   }
 
 }

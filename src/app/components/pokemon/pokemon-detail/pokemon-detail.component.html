@@ -1,1 +1,19 @@
-<p>pokemon-detail works!</p>
+<div class="detailContainer">
+    <div class="detailContent">
+        <h1 class="pokeName">{{ pokemonDetail.name }}</h1>
+        
+        <h3>Pokemon Number : {{ pokemonDetail.id }}</h3>
+
+        <hr>
+        
+        <div class="row">
+            <div class="detailImageContainer">
+                <img class="detailImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemonDetail.id }}.png" />
+            </div>
+            
+            <div class="detailImageContainer">
+                <img class="detailImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{ pokemonDetail.id }}.png" />
+            </div>
+        </div>
+    </div>
+</div>
