@@ -1,27 +1,24 @@
-<h2>Contact Us</h2>
+<h2 class="contactHeader"> Contact Us</h2>
 
 <div class="emailForm">
     <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="emailForm">
         <div class="formInput">
-            <label>
-                Name: 
-                <input formControlName="name" type="name" required />
-            </label>
-        </div>
-        <div class="formInput"> 
-            <label>
-                 Email: 
-                 <input formControlName="email" type="email" required />
-             </label>
+            <mat-form-field appearance="fill">
+                    <input matInput formControlName="name" type="name" placeholder="Name: " required />
+            </mat-form-field>
         </div>
         <div class="formInput">
-            <label>
-                Message:
-                <textarea formControlName="message" type="message" rows="3" required></textarea>    
-            </label>
+            <mat-form-field appearance="fill">
+                     <input matInput formControlName="email" type="email" placeholder="Email: " required />
+            </mat-form-field> 
+        </div>
+        <div class="formInput">
+            <mat-form-field appearance="fill">
+                <textarea matInput formControlName="message" type="message" rows="3" placeholder="Message: " required></textarea>    
+            </mat-form-field>
         </div>
     
-        <button type="submit">Submit</button>
+        <button mat-raised-button class="nav-btn" type="submit">Submit</button>
     
     </form>
 </div>

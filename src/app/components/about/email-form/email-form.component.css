@@ -1,0 +1,26 @@
+.emailForm {
+    border: 1px solid black;
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding: 10px;
+}
+
+.emailForm > form > .formInput {
+    width: 90%;
+}
+
+.emailForm > form > .formInput > * {
+    width: 100%;
+    margin-left: 5%;
+}
+
+.contactHeader {
+    text-align: center;
+}
